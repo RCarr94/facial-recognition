@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function SignIn({ onRouteChange }) {
+export default function SignIn({ onRouteChange, loadUser }) {
   const [accountInfo, setAccountInfo] = useState({
     signInEmail: '',
     signInPassword: ''
@@ -25,10 +25,11 @@ export default function SignIn({ onRouteChange }) {
           password: signInPassword
        })
      });
-
-     if (res.ok) {
-       onRouteChange('home');
-     }
+     const user = await res.json();
+      if (user.ok) {
+        loadUser(user);
+        onRouteChange('home');      
+      }
    } catch (err) {
      console.log(err);
    }

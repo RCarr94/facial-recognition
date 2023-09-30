@@ -1,13 +1,13 @@
 
 
-export default function Rank() {
+export default function Rank({ userName, userEntries }) {
   return (
     <div>
       <div className="white f3">
-        {'This will be dynamic'}
+        {`${userName}, your current entry count is...`}
       </div>
       <div className="white f1">
-        {'#1'}
+        {userEntries}
       </div>
     </div>
   );
