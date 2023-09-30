@@ -26,7 +26,7 @@ export default function SignIn({ onRouteChange, loadUser }) {
        })
      });
      const user = await res.json();
-      if (user.ok) {
+      if (user.id) {
         loadUser(user);
         onRouteChange('home');      
       }
