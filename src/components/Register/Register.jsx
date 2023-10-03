@@ -33,7 +33,7 @@ export default function Register({ onRouteChange, loadUser }) {
         });
         const user = await res.json();
 
-        if (user) {
+        if (user.id) {
           loadUser(user);
           onRouteChange('home');
         }
