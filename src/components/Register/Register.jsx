@@ -22,7 +22,7 @@ export default function Register({ onRouteChange, loadUser }) {
     async function onSubmitRegister() {
       const { name, email, password } = accountInfo;
       try {
-        const res = await fetch('http://localhost:3001/register', {
+        const res = await fetch('https://still-sierra-22534-25b72cc3bfc4.herokuapp.com/register', {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
