@@ -1,6 +1,6 @@
-# **TeamTrailz**
 
-## **[Facial Recognition App](https://facial-recognition-app-be4c84d39dbc.herokuapp.com/)**
+
+# **[Facial Recognition App](https://facial-recognition-app-be4c84d39dbc.herokuapp.com/)**
 
 
 Simple facial recognition app that can identify a face in an image.
